@@ -1,0 +1,12 @@
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\bin\Release\WPFLabControls.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\bin\Release\WPFLabControls.pdb
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\Meter.baml
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\RadialScale.baml
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\Meter.g.cs
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\RadialScale.g.cs
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\WPFLabControls_MarkupCompile.cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\WPFLabControls.g.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\WPFLabControls.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\WPFLabControls.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\WPFLabControls.dll
+C:\Users\User\Documents\Visual Studio 2013\Projects\WPFLabControls\WPFLabControls\obj\Release\WPFLabControls.pdb
