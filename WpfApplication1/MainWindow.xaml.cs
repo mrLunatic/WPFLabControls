@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -25,6 +26,15 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+            var t= new DispatcherTimer();
+            t.Interval = TimeSpan.FromMilliseconds(1);
+            t.Tick += t_Tick;
+            t.Start();
+        }
+
+        void t_Tick(object sender, EventArgs e)
+        {
+            gauge.Value = DateTime.Now.Millisecond;
         }
     }
 }
