@@ -2,10 +2,11 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Lab="clr-namespace:LabControls;assembly=LabControls"
-        Title="MainWindow" Height="381" Width="534">
+        xmlns:coll="clr-namespace:System.Collections.ObjectModel;assembly=System"
+        Title="MainWindow" Height="671" Width="694">
     <Window.Resources>
         <ResourceDictionary>
-            <Style x:Key="ClassicGauge" TargetType="Lab:Gauge">
+            <Style x:Key="ClassicGauge" TargetType="Lab:ControlView">
                 <Setter Property="MajorTick">
                     <Setter.Value>
                         <Lab:Tick Size="1 8" Fill="Red"/>
@@ -16,18 +17,13 @@
                         <Lab:Tick Size="1 4" Fill="Red"/>
                     </Setter.Value>
                 </Setter>
-                <Setter Property="Pointer">
-                    <Setter.Value>
-                        <Lab:Pointer Size="50 50" Type="InvTriangle" Fill="Black"/>
-                    </Setter.Value>
-                </Setter>
                 <Setter Property="Ramp">
                     <Setter.Value>
                         <Lab:Ramp Fill="Black" Thickness="1"/>
                     </Setter.Value>
                 </Setter>
             </Style>
-            <Style x:Key="CoolGauge" TargetType="Lab:Gauge">
+            <Style x:Key="CoolGauge" TargetType="Lab:ControlView">
                 <Setter Property="MajorTick">
                     <Setter.Value>
                         <Lab:Tick Size="8 8" Fill="Orange" Type="Triangle"/>
@@ -38,11 +34,7 @@
                         <Lab:Tick Size="4 4" Fill="Orange" Type="Ellipse"/>
                     </Setter.Value>
                 </Setter>
-                <Setter Property="Pointer">
-                    <Setter.Value>
-                        <Lab:Pointer Size="10 150" Type="InvTriangle" Fill="Orange"/>
-                    </Setter.Value>
-                </Setter>
+
                 <Setter Property="Ramp">
                     <Setter.Value>
                         <Lab:Ramp Fill="Black" Thickness="0"/>
@@ -53,21 +45,10 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition/>
+    <Grid ShowGridLines="True">
 
-        </Grid.RowDefinitions>
-
-
-        <Lab:Gauge FontSize="30" Name="gauge" Radius="{Binding ElementName=gauge, Path=ActualWidth}"  Margin="10" Grid.Row="1" Style="{StaticResource ClassicGauge}" 
-                   NegativeFill="Green" PositiveFill="Purple" StartAngle="-190" EndAngle="90" Grid.Column="1">
+        <Lab:Gauge  Name="gauge"  Margin="30"   Style="{StaticResource CoolGauge}"
+                   NegativeFill="Green" PositiveFill="Purple" >
             <Lab:Gauge.Scale>
                 <Lab:Scale ValueMin="0" ValueMax="1000"  MajorStep="100" MinorStep="20" FormatString="F0"/>
             </Lab:Gauge.Scale>
@@ -75,7 +56,26 @@
                 <Lab:Range Start="0" End="500" Fill="LightGreen"/>
                 <Lab:Range Start="500" End="900" Fill="Orange"/>
             </Lab:Gauge.Ranges>
+            <Lab:Gauge.Pointer>
+                <Lab:Pointer Size="1 100" Type="Rectangle" />
+            </Lab:Gauge.Pointer>
         </Lab:Gauge>
+
+
+        <Lab:HSlider   Name="slider"  Margin="130" Style="{StaticResource CoolGauge}"
+                   NegativeFill="Green" PositiveFill="Purple"  >
+            <Lab:HSlider.Scale>
+                <Lab:Scale ValueMin="0" ValueMax="1000"  MajorStep="100" MinorStep="20" FormatString="F0"/>
+            </Lab:HSlider.Scale>
+            <Lab:HSlider.Ranges>
+                <Lab:Range Start="0" End="500" Fill="LightGreen"/>
+                <Lab:Range Start="500" End="900" Fill="Orange"/>
+            </Lab:HSlider.Ranges>
+            <Lab:HSlider.Pointer>
+                <Lab:Pointer Size="1 100" Type="Rectangle" />
+            </Lab:HSlider.Pointer>
+        </Lab:HSlider>
+
 
     </Grid>
 </Window>

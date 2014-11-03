@@ -34,7 +34,9 @@ namespace WpfApplication1
 
         void t_Tick(object sender, EventArgs e)
         {
-            gauge.Value = DateTime.Now.Millisecond;
+            var val = DateTime.Now.Millisecond;
+            slider.Value = val;
+            gauge.Value = val;
         }
     }
 }
